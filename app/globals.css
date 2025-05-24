@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes borderPulse {
+  0% {
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+}
+
+.animate-border {
+  animation: borderPulse 3s infinite;
+}
+
+/* Update the animation keyframes to make them more reliable */
+/* Top left icon animation */
+@keyframes floatTopLeftToCenter {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  10% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.7;
+    transform: translate(20px, 15px);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translate(40px, 30px);
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(60px, 45px);
+  }
+}
+
+/* Bottom left icon animation */
+@keyframes floatBottomLeftToCenter {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  10% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.7;
+    transform: translate(20px, -15px);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translate(40px, -30px);
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(60px, -45px);
+  }
+}
+
+/* Middle left icon animation */
+@keyframes floatMiddleLeftToCenter {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  10% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.7;
+    transform: translateX(20px);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateX(40px);
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+}
+
+/* Top right icon animation */
+@keyframes floatTopRightToCenter {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  10% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.7;
+    transform: translate(-20px, 15px);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translate(-40px, 30px);
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-60px, 45px);
+  }
+}
+
+/* Bottom right icon animation */
+@keyframes floatBottomRightToCenter {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  10% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.7;
+    transform: translate(-20px, -15px);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translate(-40px, -30px);
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-60px, -45px);
+  }
+}
+
+/* Middle right icon animation */
+@keyframes floatMiddleRightToCenter {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  10% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.7;
+    transform: translateX(-20px);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateX(-40px);
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
